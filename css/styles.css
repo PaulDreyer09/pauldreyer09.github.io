@@ -118,6 +118,10 @@ h6{ font-size: 16px;}
 }
 
 #navigation li{
+    border: solid var(--mainText) 2px;
+    border-radius: 6px;
+    padding: 5px 10px;
+
     display: inline-block;
     margin-right: 5px;
     margin-left: 5px;
@@ -285,41 +289,50 @@ h6{ font-size: 16px;}
     background-color: var(--previewShadowBg);
 }
 
-.post-wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 320px);
-    gap: 20px;
-    
-}
 
+/* posts start */
 .post{
+    display: flex;
+    justify-content: space-around;
     border: 1px solid var(--borderColor);
 
     -webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
     box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
 }
 
+
 .thumbnail{
+    display: inline-block;
+    width: 40%;    
+    
+}
+
+.thumbnail img{
     display: block;
-    width: 100%;
-    height: 180px
+    border-radius: 15%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px;
 }
 
 .post-preview{
-    background-color: #fff;
+    background-color: var(--secondaryColor);
+    width: 50%;
     padding: 30px;
 }
 
 .post-title{
-    color: black;
+    color: var(--mainText);
     margin: 0;
 }
 
 .post-intro{
-    color: #4b5156;
+    color: var(--secondaryText);
     font-size: 16px;
 }
+/* posts end */
 
 #contact-form{
     display: block;
@@ -364,6 +377,10 @@ h6{ font-size: 16px;}
 
 footer p{
     text-align: center;
+    margin: 0;
+    padding: 16px 0;
+
+    background-color: var(--secondaryColor);
 }
 
 @media screen and (max-width: 1200px){
